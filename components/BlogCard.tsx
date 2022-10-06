@@ -1,14 +1,10 @@
 import Link from 'next/link';
 import React from 'react'
-import Image from 'next/image';
 import {formateDate} from '../utils'
 
 import {IArticle} from '../types';
 
 
-
-
-import images from '../assets/images.jpg';
 
 
 
@@ -33,7 +29,7 @@ const BlogCard = ({article}: IPropTypes) => {
 
                 <div className='article-card-detials'>
                     <div className='article-card-auhtor-image'>
-                        <Image src={`${process.env.API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
+                        <img src={`${process.env.API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
                             height={35}
                             width={35}
                         />
