@@ -29,7 +29,7 @@ const BlogCard = ({article}: IPropTypes) => {
 
                 <div className='article-card-detials'>
                     <div className='article-card-auhtor-image'>
-                        <img src={`${process.env.API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
+                        <img src={`https://powerful-meadow-03273.herokuapp.com/${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
                             height={35}
                             width={35}
                         />

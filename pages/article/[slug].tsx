@@ -86,7 +86,7 @@ const slug= ({categories, article, notFound=false}: IPropType) => {
 
                         <div className='article-details-image'>    
                             <img
-                                src={`${process.env.API_BASE_URL}${article.attributes.Image.data.attributes.url}`}  
+                                src={`https://powerful-meadow-03273.herokuapp.com/${article.attributes.Image.data.attributes.url}`}  
                                 alt={article.attributes.Title}
                                 height={600}
                                 width={710}
