@@ -59,7 +59,7 @@ const slug= ({categories, article, notFound=false}: IPropType) => {
                     <div className='article-details-author'>
 
                         <div className='article-details-auhtor-image'>
-                            <Image src={`http://localhost:1337${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
+                            <Image src={`${process.env.API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
                                 height={35}
                                 width={35}
                             />
@@ -87,7 +87,7 @@ const slug= ({categories, article, notFound=false}: IPropType) => {
 
                         <div className='article-details-image'>    
                             <Image
-                                src={`http://localhost:1337${article.attributes.Image.data.attributes.url}`}  
+                                src={`${process.env.API_BASE_URL}${article.attributes.Image.data.attributes.url}`}  
                                 alt={article.attributes.Title}
                                 height={600}
                                 width={710}
