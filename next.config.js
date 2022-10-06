@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['localhost']
+    domains: ['https://powerful-meadow-03273.herokuapp.com/']
   }
 }
 
