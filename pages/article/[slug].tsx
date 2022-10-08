@@ -58,7 +58,7 @@ const slug= ({categories, article, notFound=false}: IPropType) => {
                     <div className='article-details-author'>
 
                         <div className='article-details-auhtor-image'>
-                            <img src={`https://storage.cloud.google.com/jobz-career-jobz-blog/Screenshot_2022_10_08_165903_924ca30ee5/Screenshot_2022_10_08_165903_924ca30ee5.png`}
+                            <img src={`https://storage.googleapis.com/jobz-career-jobz-blog/Screenshot_2022_10_08_165903_e37c8b73d1/Screenshot_2022_10_08_165903_e37c8b73d1.svg`}
                                 height={35}
                                 width={35}
                             />
