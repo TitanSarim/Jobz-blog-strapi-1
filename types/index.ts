@@ -77,25 +77,25 @@ export interface IAuthor{
     }
 }
 
-export interface IImageData{
-    data: {
-        attributes:{
-            url: string;
-            formats:{
-                small:{
-                    url: string;
-                }
-            }
-        }
-    }
-}
+// export interface IImageData{
+//     data: {
+//         attributes:{
+//             url: string;
+//             formats:{
+//                 small:{
+//                     url: string;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
 export interface IArticleAttribute{
     Title: string;
     body:  string |MDXRemoteSerializeResult;
     shortDescription: string;
-    Image: IImageData;
+    // Image: IImageData;
     Slug: string;
     updatedAt: string;
     author: IAuthor;

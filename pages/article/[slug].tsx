@@ -58,7 +58,7 @@ const slug= ({categories, article, notFound=false}: IPropType) => {
                     <div className='article-details-author'>
 
                         <div className='article-details-auhtor-image'>
-                            <img src={`${process.env.API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
+                            <img src={`https://storage.cloud.google.com/jobz-career-jobz-blog/Screenshot_2022_10_08_165903_924ca30ee5/Screenshot_2022_10_08_165903_924ca30ee5.png`}
                                 height={35}
                                 width={35}
                             />
@@ -84,15 +84,15 @@ const slug= ({categories, article, notFound=false}: IPropType) => {
 
                     <div>
 
-                        <div className='article-details-image'>    
+                        {/* <div className='article-details-image'>    
                             <img
-                                src={`https://powerful-meadow-03273.herokuapp.com/${article.attributes.Image.data.attributes.url}`}  
+                                src={`http://localhost:1337${article.attributes.Image.data.attributes.url}`}  
                                 alt={article.attributes.Title}
                                 height={600}
                                 width={710}
 
                             />
-                        </div>
+                        </div> */}
 
                     </div>
 

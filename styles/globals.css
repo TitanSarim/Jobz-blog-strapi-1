@@ -539,6 +539,18 @@ body {
   padding: 0 10px;
 }
 
+.article-details-body img{
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 50px;
+  width: fit-content;
+  height: fit-content;
+}
+
 /* table starts*/
 .table{
   width: 100%;
@@ -1347,6 +1359,11 @@ body {
 
   .article-details-image img{
     width: 540px;
+  }
+
+  .article-details-body img{
+    height: 100%;
+    width: 100%;
   }
 
   /* about us page */
