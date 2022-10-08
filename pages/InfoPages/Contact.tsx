@@ -4,11 +4,10 @@ import Head from 'next/head';
 import router from 'next/router';
 import qs from 'qs';
 import React from 'react'
-import { Categories, Footer, Nav } from '../../components';
+import { Categories, Footer, Nav, Form } from '../../components';
 import {fetchCategories } from '../../http';
 import {ICategory, ICollectionResponse, IPagination } from '../../types';
 import { debounce } from '../../utils';
-
 
 import {GoLocation} from 'react-icons/go';
 import {BsTelephone} from 'react-icons/bs';
@@ -32,7 +31,6 @@ const Contact= ({categories, }: IPropType) => {
     }
 
 
-
   return (
 
     <div>
@@ -50,14 +48,7 @@ const Contact= ({categories, }: IPropType) => {
 
                 <div className='contactus-form'>
 
-                  <h1>Write us</h1>
-                  <form action="">
-                    <input type="text" placeholder='Name' required/>
-                    <input type="text" placeholder='Email' required/>
-                    <input type="number" placeholder='Phone NO' required/>
-                    <textarea placeholder='Message' required />
-                    <input type="submit" value="send" className='submitbtn'/>
-                  </form>
+                 <Form/>
 
                 </div>
 
