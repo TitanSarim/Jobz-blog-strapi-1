@@ -36,25 +36,25 @@ const Footer = ({categories}: IPropTypes) => {
             <ul>
 
               <li>
-                <Link href="">
+                <Link href="/">
                   <a >Latest Jobs</a>
                 </Link>
               </li>
 
               <li>
-                <Link href="">
+                <Link href="/InfoPages/About">
                   <a >About Us</a>
                 </Link>
               </li>
 
               <li>
-                <Link href="">
+                <Link href="/InfoPages/Contact">
                   <a >Contact Us</a>
                 </Link>
               </li>
 
               <li>
-                <Link href="">
+                <Link href="/InfoPages/Privacy">
                   <a >Privacy & Policy</a>
                 </Link>
               </li>
