@@ -9,7 +9,7 @@ import {ICollectionResponse, ICategory, IArticle, IPagination, IQueryOptions} fr
 import {Categories, NavCategory, ArticleList, Pagination, Footer} from '../components'
 import { useRouter } from 'next/router';
 import { debounce } from '../utils';
-import { useEffect } from 'react';
+import React,{ useEffect } from 'react';
 import Script from 'next/script';
 
 
