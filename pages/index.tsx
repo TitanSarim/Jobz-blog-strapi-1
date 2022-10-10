@@ -32,7 +32,16 @@ interface IPropTypes{
 
 }
 
-const router = useRouter()
+
+const Home: NextPage<IPropTypes> = ({categories, articles}) => {
+
+  const router = useRouter();
+
+  const {page, pageCount} = articles.pagination;
+
+  const handleSearch = (query: string)=>{
+      router.push(`/?search=${query}`);
+  }
 
   useEffect(() => {
    const handleRouterChnage = (url:any) =>{
@@ -45,18 +54,6 @@ const router = useRouter()
    }
 
   }, [router.events])
-
-
-
-const Home: NextPage<IPropTypes> = ({categories, articles}) => {
-
-  const router = useRouter();
-
-  const {page, pageCount} = articles.pagination;
-
-  const handleSearch = (query: string)=>{
-      router.push(`/?search=${query}`);
-  }
 
   // console.log('categories', categories)
 
@@ -81,7 +78,7 @@ const Home: NextPage<IPropTypes> = ({categories, articles}) => {
 
                   gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
                 `}
-            </Script>
+              </Script>
           
 
           <NavCategory categories={categories.items} handleOnSearch={debounce(handleSearch, 1500)}/>
