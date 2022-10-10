@@ -18,7 +18,10 @@ function MyApp ({ Component, pageProps}: AppProps){
     ga.pageview(url)
    }
 
-   router.events.on('handleRouterChnage', handleRouterChnage)
+   router.events.on('routeChangeComplete', handleRouterChnage);
+   return () => {
+     router.events.off('routeChangeComplete', handleRouterChnage);
+   }
 
   }, [router.events])
   
