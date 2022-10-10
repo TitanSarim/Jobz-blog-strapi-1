@@ -1,14 +1,9 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import {Google} from '../components/Google'
-import Head from 'next/head'
-import getConfig from 'next/config';
-
-
-
-const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
-const trackingId: string = publicRuntimeConfig.TRACKING_ID || serverRuntimeConfig.TRACKING_ID;
-
+import Script from 'next/script';
+import React,{useEffect} from 'react';
+import { useRouter } from 'next/router';
+import * as ga from '../lib/google-analytics'
 
 
 
@@ -16,43 +11,37 @@ const trackingId: string = publicRuntimeConfig.TRACKING_ID || serverRuntimeConfi
 
 function MyApp ({ Component, pageProps}: AppProps){
 
+  const router = useRouter()
+
+  useEffect(() => {
+   const handleRouterChnage = (url:any) =>{
+    ga.pageview(url)
+   }
+
+   router.events.on('handleRouterChnage', handleRouterChnage)
+
+  }, [router.events])
+  
+
   return( 
     <>
-    <div>
-
-      
-    {/* <!-- Google tag (gtag.js) --> */}
-    <Head>
-          {trackingId && (
-            <>
-              <script
-                async
-                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.TRACKING_ID}`}
-              />
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
+       
+              <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} strategy='afterInteractive'/>
+              
+              <Script id="google-analytics-script" strategy='afterInteractive'>
+                {`
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.TRACKING_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-                }}
-              />
-            </>
-          )}
-        </Head>
 
-
+                  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+                `}
+              </Script>
 
           <div>
             <Component {...pageProps} />
           </div>
 
-
-    </div>
 
     </>
    
