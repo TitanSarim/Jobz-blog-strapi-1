@@ -2,13 +2,15 @@ import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 import {AxiosResponse} from 'axios';
 import qs from 'qs'
-
+import * as ga from '../lib/google-analytics'
 import {fetchCategories, fetchArticles} from '../http'
 import {ICollectionResponse, ICategory, IArticle, IPagination, IQueryOptions} from '../types';
 
 import {Categories, NavCategory, ArticleList, Pagination, Footer} from '../components'
 import { useRouter } from 'next/router';
 import { debounce } from '../utils';
+import { useEffect } from 'react';
+import Script from 'next/script';
 
 
 
@@ -29,6 +31,20 @@ interface IPropTypes{
   }
 
 }
+
+const router = useRouter()
+
+  useEffect(() => {
+   const handleRouterChnage = (url:any) =>{
+    ga.pageview(url)
+   }
+
+   router.events.on('routeChangeComplete', handleRouterChnage);
+   return () => {
+     router.events.off('routeChangeComplete', handleRouterChnage);
+   }
+
+  }, [router.events])
 
 
 
@@ -55,6 +71,17 @@ const Home: NextPage<IPropTypes> = ({categories, articles}) => {
             <link rel="icon" href="/favicon.ico" />
           </Head>
 
+          <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} strategy='afterInteractive'/>
+              
+              <Script id="google-analytics-script" strategy='afterInteractive'>
+                {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+
+                  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+                `}
+            </Script>
           
 
           <NavCategory categories={categories.items} handleOnSearch={debounce(handleSearch, 1500)}/>
