@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat Alternates', sans-serif;
-    background-color: white;
+  /* font-family: 'Montserrat Alternates', sans-serif; */
+  font-family: 'Noto Sans', sans-serif;
+  background-color: white;
 }
 
 
@@ -26,7 +28,7 @@ body {
   display: grid;
   grid-template-columns: 20% 40% 40%;
   background-color: white;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   border-bottom: 1px solid rgb(94, 94, 94);
 
 }
@@ -71,7 +73,7 @@ body {
   align-items: center;
   justify-content: center;
   width:max-content;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   transition: all 500ms;
 }
 
@@ -86,7 +88,7 @@ body {
   background-color: transparent;
   color: black;
   font-weight: 600;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
   border: none;
   display: flex;
@@ -178,7 +180,7 @@ body {
   outline: none;
   border: none;
   font-size: 17px;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 
@@ -201,7 +203,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 500ms;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .search-bar-btn:hover{
@@ -256,7 +258,7 @@ body {
   background-color: transparent;
   color: black;
   font-weight: 600;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
   border: none;
   display: flex;
@@ -383,7 +385,7 @@ body {
   font-size: 21px;
   color: rgba(4,46,88,0.83);
   font-weight: 500;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   transition: all 500ms;
   cursor: pointer;
 }
@@ -417,11 +419,14 @@ body {
 .article-card-shordesc{
   font-size: 17px;
   color: #2b2b2b;
+  font-weight: 400;
+  opacity: 85%;
+  word-spacing: 0.1rem;
 }
 
 .article-card-apply-btn button{
   position: relative;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   background-color: rgba(4,46,88,0.83);
   color: white;
   border: none;
@@ -461,7 +466,7 @@ body {
   cursor: pointer;
   border-radius: 8px;
   padding: 14px 25px;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   transition: all 500ms;
 }
 
@@ -537,6 +542,11 @@ body {
 .article-details-body{
   line-height: 27px;
   padding: 0 10px;
+  font-size: 17px;
+  color: #2b2b2b;
+  font-weight: 400;
+  opacity: 99%;
+  word-spacing: 0.05rem;
 }
 
 .article-details-body img{
@@ -551,41 +561,138 @@ body {
   height: fit-content;
 }
 
+
 /* table starts*/
-.table{
-  width: 100%;
-  height: max-content;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  line-height: 33px;
-  border: 1px solid rgb(211, 211, 211);
-  border-radius: 8px;
-}
 
-.table thead{
-  background-color: #d1d1d1;
-}
-
-.table tbody{
-  border-bottom: 1px solid black !important;
-  background-color: rgb(238, 238, 238);
-}
-
-.table tr{
-  border: 1px solid black !important;
-  font-size: 15px !important;
-  align-items: center !important;
-  text-align: center;
-}
 
 /* table ends */
 
-.raw-html-embed a{
+/* article body btn starts*/
+
+
+/*text colors starts*/
+.text-bold{
+  font-weight: 700;
+}
+
+.text-faint-blue{
+  color: #22577a;
+}
+
+.text-faint-red{
+  color: rgb(255, 0, 0);
+}
+
+.text-royal-blue{
+  color: rgb(0, 0, 255);
+}
+
+/* text colors ends*/
+
+/*text background starts*/
+
+.bg-faint-blue{
+  background-color: #22577a;
+  color: white;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.bg-faint-red{
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.bg-royal-blue{
+  background-color: rgb(0, 95, 248);
+  color: white;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+/* text background ends*/
+
+/* text size starts*/
+
+.heading-two{
+  font-size: 23px;
+}
+
+.heading-three{
+  font-size: 21px;
+}
+
+
+/* text size ends */
+
+/* table setting starts*/
+.table-container{
+  width: fit-content;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.table-header-contianer{
+  position: relative;
+  background-color: #333F4F;
+  color: white;
+}
+
+.table-body-container{
+  position: relative;
+  background-color: #FCE4D6;
+  color: black;
+}
+
+.table-body-container tr td{
+  padding: 4px !important;
+}
+
+/* table settings ends */
+
+/* link starts */
+.link-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 40px !important;
+  margin-bottom: 30px;
+  border: 1px solid rgb(110, 110, 110);
+  border-radius: 8px;
+  padding: 10px 30px 10px 50px;
+  width: 100%;
+}
+
+.link-container p{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.link-container a{
+  color: rgb(0, 0, 255);
+  font-weight: 600;
+  transition: all 500ms;
+}
+
+.link-container a:hover{
+  color: red;
+  transform: scale(1.01);
+}
+
+/* link ends */
+.apply-btn{
   text-decoration: none;
 }
 
-.raw-html-embed button{
+.apply-btn button{
   background-color: white;
   border: none;
   display: flex !important;
@@ -600,14 +707,16 @@ body {
   padding: 13px 24px;
   border-radius: 8px;
   transition: all 500ms;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
-.raw-html-embed button:hover{
+.apply-btn button:hover{
   transform: scale(1.06);
   background-color: rgba(4,46,88,0.91);
 }
 
+
+/*  */
 .article-details-image{
   position: relative;
   display: flex;
@@ -780,7 +889,7 @@ body {
   padding: 10px;
   font-size: 16px;
   width: 80%;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   transition: all 500ms;
 }
 
@@ -799,7 +908,7 @@ body {
   font-size: 16px;
   min-height: 100px;
   width: 80%;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .submitbtn{
@@ -1553,17 +1662,6 @@ body {
     text-align: center;
   }
 
-  /* article detials  */
-
-  .table{
-    position: relative;
-    width: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-  }
-
 /*  */
 
   .contactus-address-info ul li span{
@@ -1609,14 +1707,10 @@ body {
     padding: 5px;
   }
     
-  .table{
+  .table-container{
     position: relative;
-    width: 330px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    left: -10px;
+    width: 360px !important;
+    left: -10px !important;
   }
 
 
@@ -1635,6 +1729,13 @@ body {
   .home-page-add img{
     width: 310px !important;
     height: 200px !important;
+  }
+
+  .table-container{
+    position: relative;
+    width: 330px !important;
+    left: -14px !important;
+    padding: 0%;
   }
 
   .footer-categories{
@@ -1671,28 +1772,21 @@ body {
     left: 0px;
   }
 
-  .table{
+  .table-container{
     position: relative;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    left: 0;
+    width: 310px !important;
+    left: -18px !important;
+    padding: 0%;
   }
 
 
 }
 
 @media screen and (max-width: 368px) {
-  .table{
+  .table-container{
     position: relative;
     width: 300px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    left: 0;
+    left: -20px !important;
   }
 
 }
