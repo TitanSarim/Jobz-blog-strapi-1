@@ -30,7 +30,9 @@ const NavArticle = ({categories, handleOnSearch}: IPropTypes) => {
         
 
             <div className='nav-logo'>
-                <Image src={logo} alt="Website Logo" width={190} height={50}/>
+                <Link href='/'>
+                    <Image src={logo} alt="Website Logo" width={190} height={50}/>
+                </Link>
             </div>
 
         <div className={showMediaIcon ? "menu-link  mobile-menu-link" : "menu-link"}>

@@ -40,6 +40,7 @@ body {
   display: flex;
   justify-content: center;
   height: 75px;
+  cursor: pointer;
 }
 
 
@@ -559,8 +560,7 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
   padding-bottom: 50px;
-  width: fit-content;
-  height: fit-content;
+  width: 98%;
 }
 
 
@@ -1428,6 +1428,7 @@ body {
     justify-content: flex-start;
     margin-left: -20px;
     z-index: 99;
+
   }
 
   .hambergmenu{

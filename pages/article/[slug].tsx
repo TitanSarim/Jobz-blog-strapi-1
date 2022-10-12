@@ -39,8 +39,7 @@ const slug= ({categories, article, notFound=false}: IPropType) => {
     <>
 
             <Head>
-                <title>{article.attributes.Title}</title>
-                <title>Jobzcareer About Us</title>
+                <title>Jobzcareer {article.attributes.Title}</title>
                 <meta name="Find Jobs in Pakistan by using Jobzcareer, Government Jobs 2022, Army Jobs 2022, Navy Jobs 2022, Latest Jobs 2022"   content="Latest Jobs, Government Jobs, Army Jobs 2022, Navy Jobs 2022, Latest Jobs 2022"/>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
