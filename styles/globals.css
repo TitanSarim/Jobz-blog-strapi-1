@@ -556,6 +556,8 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
   padding-bottom: 50px;
   width: fit-content;
   height: fit-content;
@@ -624,6 +626,13 @@ body {
   font-size: 21px;
 }
 
+.space{
+  position: relative;
+  top: 30px !important;
+  margin-top: 30px !important;
+  width: 30px;
+  margin-bottom: 30px !important;
+}
 
 /* text size ends */
 
@@ -632,6 +641,9 @@ body {
   width: fit-content;
   border-radius: 8px;
   padding: 3px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .table-header-contianer{
